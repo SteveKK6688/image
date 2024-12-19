@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片压缩工具</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>图片压缩工具</h1>
+    <p class="subtitle">简单、快速的在线图片压缩工具</p>
+
+    <div class="upload-container">
+        <input type="file" id="fileInput" accept="image/jpeg,image/png">
+        <div id="uploadArea">
+            <i>📤</i>
+            <p>点击或拖拽图片至此处</p>
+            <p style="font-size: 0.9em; color: #666;">支持 PNG、JPG 格式</p>
+        </div>
+    </div>
+
+    <div id="compressionControls">
+        <p>压缩比例: <span id="ratioValue">100</span>%</p>
+        <input type="range" id="compressionRatio" class="compression-slider" min="1" max="100" value="100">
+    </div>
+
+    <div id="previewContainer">
+        <div class="preview-box">
+            <h3>原图</h3>
+            <img id="originalPreview" alt="原图预览">
+            <p class="size-info">大小：<span id="originalSize">-</span></p>
+        </div>
+        <div class="preview-box">
+            <h3>压缩后</h3>
+            <img id="compressedPreview" alt="压缩后预览">
+            <p class="size-info">大小：<span id="compressedSize">-</span></p>
+        </div>
+    </div>
+
+    <div id="downloadContainer">
+        <button id="downloadBtn">下载压缩后的图片</button>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
